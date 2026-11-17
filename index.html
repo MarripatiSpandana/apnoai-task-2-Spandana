@@ -58,6 +58,8 @@
       const [isDark, setIsDark] = useState(false);
       const [isConnected, setIsConnected] = useState(false);
 
+      const [likes, setLikes] = useState(0);
+
       // Toggle theme function
       const toggleTheme = () => setIsDark(!isDark);
       
@@ -131,6 +133,13 @@
               }`}
             >
               {isConnected ? '✓ Connected' : 'Connect'}
+
+              
+            </button>
+            <button
+               onClick={() => setLikes(likes + 1)}
+               className="mt-4 rounded-full bg-pink-500 px-5 py-2 text-white hover:bg-pink-600 transition"
+>                      💜 Like {likes}
             </button>
 
             {/* Social Links */}
